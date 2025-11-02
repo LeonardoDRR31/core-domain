@@ -18,7 +18,7 @@ Installing this package is a multi-step process. Please follow these instruction
 
 ### 1. Install the Package
 
-First, install the incadev/core package via Composer:
+First, install the incadev-uns/core-domain package via Composer:
 
 ```bash
 composer require incadev-uns/core-domain:dev-main

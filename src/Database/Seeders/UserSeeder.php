@@ -523,5 +523,73 @@ class UserSeeder extends Seeder
             ]
         );
         $improvement1->assignRole($continuousImprovementRole);
+
+        // 🧩 GRUPO STRATEGIC PLANNING - Usuarios adicionales
+
+        // Alliances Manager
+        $alliancesManagerRole = Role::create(['name' => 'alliances_manager']);
+        $alliancesManager1 = $userModelClass::firstOrCreate(
+            ['email' => 'carlos.alliances@incadev.com'],
+            [
+                'name' => 'Carlos Dominguez',
+                'password' => Hash::make('password'),
+                'dni' => '00000031',
+                'fullname' => 'CARLOS DANIEL DOMINGUEZ ALBA',
+            ]
+        );
+        $alliancesManager1->assignRole($alliancesManagerRole);
+
+        // Documents Manager
+        $documentsManagerRole = Role::create(['name' => 'documents_manager']);
+        $documentsManager1 = $userModelClass::firstOrCreate(
+            ['email' => 'alex.docs@incadev.com'],
+            [
+                'name' => 'Alex Alcantara',
+                'password' => Hash::make('password'),
+                'dni' => '00000032',
+                'fullname' => 'ALEX ALCANTARA VEGA',
+            ]
+        );
+        $documentsManager1->assignRole($documentsManagerRole);
+
+        // Conversation Manager
+        $conversationManagerRole = Role::create(['name' => 'conversation_manager']);
+        $conversationManager1 = $userModelClass::firstOrCreate(
+            ['email' => 'ilan.conversation@incadev.com'],
+            [
+                'name' => 'Ilan Angeles',
+                'password' => Hash::make('password'),
+                'dni' => '00000033',
+                'fullname' => 'ILAN ANGELES RODRIGUEZ',
+            ]
+        );
+        $conversationManager1->assignRole($conversationManagerRole);
+
+        // Planner Admin adicional
+        $plannerAdmin2 = $userModelClass::firstOrCreate(
+            ['email' => 'angel.planner@incadev.com'],
+            [
+                'name' => 'Angel Bustamante',
+                'password' => Hash::make('password'),
+                'dni' => '00000034',
+                'fullname' => 'ANGEL BUSTAMANTE PALACIOS',
+            ]
+        );
+        $plannerAdmin2->assignRole($plannerAdminRole);
+
+        // Continuous Improvement adicional
+        $improvement2 = $userModelClass::firstOrCreate(
+            ['email' => 'diego.improvement@incadev.com'],
+            [
+                'name' => 'Diego Briceño',
+                'password' => Hash::make('password'),
+                'dni' => '00000035',
+                'fullname' => 'DIEGO MAX BRICEÑO CABRERA',
+            ]
+        );
+        $improvement2->assignRole($continuousImprovementRole);
+
+        // Viewer Role
+        $viewerRole = Role::create(['name' => 'viewer']);
     }
 }
